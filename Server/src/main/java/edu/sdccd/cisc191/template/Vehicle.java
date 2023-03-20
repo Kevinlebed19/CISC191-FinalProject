@@ -14,7 +14,13 @@ public class Vehicle {
     /**
      * Creates a vehicle with no attributes.
      */
-    public Vehicle() {}
+    public Vehicle() {
+        manufacturerName = "";
+        milesOnVehicle = 0;
+        price = 0;
+        numberOfSeats = 0;
+        options = new Option[0];
+    }
 
     /**
      * Creates a new vehicle with the given attributes.
@@ -84,6 +90,8 @@ public class Vehicle {
     public void setOptions(Option[] options) {
         this.options = options;
     }
+
+
 
     /**
      * Returns the name of the manufacturer of the vehicle.
