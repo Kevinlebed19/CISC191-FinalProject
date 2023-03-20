@@ -131,4 +131,16 @@ public class ObjectOrientedTest {
 
     }
 
+    @Test
+    void addOptionTest() {
+        Option testOption = new Option("Power Windows");
+        Vehicle testVehicle = new Vehicle();
+
+        assertEquals(0, testVehicle.getOptions().length);
+
+        testVehicle.addOption(testOption);
+
+        assertEquals(1, testVehicle.getOptions().length);
+        assertEquals("Power Windows", testVehicle.getOptions()[0].getDetails());
+    }
 }

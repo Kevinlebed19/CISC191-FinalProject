@@ -104,7 +104,9 @@ public class Vehicle {
             newOptionArray[i] = options[i];
         }
 
-        newOptionArray[newOptionArray.length] = option;
+        newOptionArray[newOptionArray.length - 1] = option;
+
+        options = newOptionArray;
     }
 
 
