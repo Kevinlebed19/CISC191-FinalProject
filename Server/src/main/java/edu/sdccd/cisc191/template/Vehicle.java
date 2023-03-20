@@ -92,6 +92,23 @@ public class Vehicle {
     }
 
 
+    /**
+     * Adds an optional feature to the optional features array.
+     * @param option The optional feature to be added to the vehicle
+     */
+    public void addOption(Option option) {
+        Option[] newOptionArray = new Option[options.length + 1];
+
+        for (int i = 0; i < options.length; i++)
+        {
+            newOptionArray[i] = options[i];
+        }
+
+        newOptionArray[newOptionArray.length] = option;
+    }
+
+
+
 
     /**
      * Returns the name of the manufacturer of the vehicle.
