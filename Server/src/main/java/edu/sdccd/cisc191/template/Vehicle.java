@@ -14,7 +14,13 @@ public class Vehicle {
     /**
      * Creates a vehicle with no attributes.
      */
-    public Vehicle() {}
+    public Vehicle() {
+        manufacturerName = "";
+        milesOnVehicle = 0;
+        price = 0;
+        numberOfSeats = 0;
+        options = new Option[0];
+    }
 
     /**
      * Creates a new vehicle with the given attributes.
@@ -84,6 +90,27 @@ public class Vehicle {
     public void setOptions(Option[] options) {
         this.options = options;
     }
+
+
+    /**
+     * Adds an optional feature to the optional features array.
+     * @param option The optional feature to be added to the vehicle
+     */
+    public void addOption(Option option) {
+        Option[] newOptionArray = new Option[options.length + 1];
+
+        for (int i = 0; i < options.length; i++)
+        {
+            newOptionArray[i] = options[i];
+        }
+
+        newOptionArray[newOptionArray.length - 1] = option;
+
+        options = newOptionArray;
+    }
+
+
+
 
     /**
      * Returns the name of the manufacturer of the vehicle.
